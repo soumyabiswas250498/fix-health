@@ -1,0 +1,86 @@
+[
+  {
+    "img": "/assets/img/1.png",
+    "name": "John Doe",
+    "city": "Delhi",
+    "problem": "Issue A",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/2.png",
+    "name": "Jane Smith",
+    "city": "Kolkata",
+    "problem": "Issue B",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/3.png",
+    "name": "Alex Johnson",
+    "city": "Mumbai",
+    "problem": "Issue C",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/4.png",
+    "name": "Emily Davis",
+    "city": "Chennai",
+    "problem": "Issue D",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/5.png",
+    "name": "Robert White",
+    "city": "Bengaluru",
+    "problem": "Issue E",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/6.png",
+    "name": "Mia Brown",
+    "city": "Ahmedabad",
+    "problem": "Issue F",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/1.png",
+    "name": "William Taylor",
+    "city": "Delhi",
+    "problem": "Issue G",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/2.png",
+    "name": "Sophia Anderson",
+    "city": "Mumbai",
+    "problem": "Issue H",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/3.png",
+    "name": "Daniel Miller",
+    "city": "Chennai",
+    "problem": "Issue I",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/4.png",
+    "name": "Olivia Wilson",
+    "city": "Indore",
+    "problem": "Issue J",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/5.png",
+    "name": "Liam Johnson",
+    "city": "Lucknow",
+    "problem": "Issue K",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "img": "/assets/img/6.png",
+    "name": "Ava Davis",
+    "city": "Hydrabad",
+    "problem": "Issue L",
+    "quotation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]
