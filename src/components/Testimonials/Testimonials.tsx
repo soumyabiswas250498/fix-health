@@ -58,11 +58,11 @@ export default function Testimonials() {
     }, []);
 
     return (
-        <div className='w-full px-2 '>
+        <div className='w-full px-2 my-4'>
             <div className='relative w-full'>
                 <div className='flex w-full gap-4 overflow-x-auto scrollbar-hide' ref={scrollContainerRef}>
                     {
-                        data.map((item) => <Card item={item} />)
+                        data.map((item, index) => <Card item={item} key={index} />)
                     }
                 </div>
                 <div className='absolute top-[50%] flex justify-between items-center w-full'>
