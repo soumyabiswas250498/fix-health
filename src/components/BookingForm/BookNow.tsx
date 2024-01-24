@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Form from './Form';
 
 export default function BookNow() {
-    const [showForm, setShowForm] = useState(true)
+    const [showForm, setShowForm] = useState(false)
     return (
         <div className='w-full px-2 md:mt-16' id='book-section'>
             <div className='flex justify-center w-full'>

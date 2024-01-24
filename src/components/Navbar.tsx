@@ -16,7 +16,7 @@ export default function Navbar() {
     }, [section])
 
     return (
-        <div className='pb-16'>
+        <div className='pb-12'>
             <div className='fixed flex items-center justify-between w-full px-2 backdrop-blur-md bg-[#092635a6] text-yellow-50 z-30'>
                 <img src="/assets/img/logo.svg" alt="logo" className='h-12 py-1' />
                 <div className='items-center hidden w-auto gap-3 md:flex'>
@@ -27,10 +27,10 @@ export default function Navbar() {
                 <div className='pr-3 md:hidden'>
                     {showMenu ? <RxCross2 onClick={() => setShowMenu(false)} /> : <GiHamburgerMenu onClick={() => setShowMenu(true)} />}
                 </div>
-                {showMenu && <div className='absolute flex flex-col justify-center items-center gap-2 top-[48px] h-[30vh] w-[98vw] backdrop-blur-md bg-[#3b8d8d52] border border-blue-400'>
-                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#1b4242c5]' onClick={() => { setSection('hero-section'); setShowMenu(false) }}>Home</p>
-                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#1b4242c5]' onClick={() => { setSection('testimonials-section'); setShowMenu(false) }}>Testimonials</p>
-                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#1b4242c5]' onClick={() => { setSection('book-section'); setShowMenu(false) }}>Book Now</p>
+                {showMenu && <div className='absolute flex flex-col justify-center items-center gap-2 top-[48px] h-[30vh] w-[98vw] backdrop-blur-2xl bg-[#3b8d8d75] '>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838c5]' onClick={() => { setSection('hero-section'); setShowMenu(false) }}>Home</p>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838c5]' onClick={() => { setSection('testimonials-section'); setShowMenu(false) }}>Testimonials</p>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838c5]' onClick={() => { setSection('book-section'); setShowMenu(false) }}>Book Now</p>
 
                 </div>}
             </div>

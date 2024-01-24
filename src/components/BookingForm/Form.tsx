@@ -100,14 +100,17 @@ export default function Form(props: any) {
                         value={values.company}
                         name={'company'}
                     />
-                    <RadioButton
-                        label={'Do you have any prior experience with physiotherapy ?'}
-                        error={errors.experience}
-                        name='experience'
+                    <DropDown
+                        label={'Best available doctors :'}
+                        options={[{ label: '', value: '' }, { label: 'abc', value: 'abc' }, { label: 'def', value: 'def' }, { label: 'ghi', value: 'ghi' }]}
+                        error={errors.doctor}
                         handleChange={handleChange}
-                        values={values.experience}
-                        showExperince={showExperince}
+                        handleBlur={handleBlur}
+                        touched={touched.doctor}
+                        value={values.doctor}
+                        name={'doctor'}
                     />
+
                 </div>
                 <div className='block max-w-[600px] w-[90vw] md:flex md:justify-center md:items-center gap-4'>
                     <TextArea
@@ -121,16 +124,16 @@ export default function Form(props: any) {
                     />
                 </div>
                 <div className='block max-w-[600px] w-[90vw] md:flex md:justify-center md:items-center gap-4'>
-                    <DropDown
-                        label={'Best available doctors :'}
-                        options={[{ label: '', value: '' }, { label: 'abc', value: 'abc' }, { label: 'def', value: 'def' }, { label: 'ghi', value: 'ghi' }]}
-                        error={errors.doctor}
+                    {showExperince && <RadioButton
+                        label={'Do you have any prior experience with physiotherapy ?'}
+                        error={errors.experience}
+                        name='experience'
                         handleChange={handleChange}
                         handleBlur={handleBlur}
-                        touched={touched.doctor}
-                        value={values.doctor}
-                        name={'doctor'}
-                    />
+                        values={values.experience}
+                        touched={touched.experience}
+                        showExperince={showExperince}
+                    />}
                 </div>
                 <div className=' max-w-[600px] w-[90vw] flex justify-between items-center gap-4'>
                     <button className='bg-[#5C8374] hover:bg-[#9EC8B9] px-4 py-2 rounded-md text-yellow-50 cursor-pointer select-none ' onClick={() => setShowForm(false)}>Cancel</button>
