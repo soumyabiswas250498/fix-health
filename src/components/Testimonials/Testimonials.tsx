@@ -7,7 +7,6 @@ import Card from './Card';
 export default function Testimonials() {
     const [showLeftButton, setShowLeftButton] = useState(false);
     const [showRightButton, setShowRightButton] = useState(true);
-    console.log(data);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const handleScroll = (direction: 'left' | 'right') => {
         const container = scrollContainerRef.current;
@@ -32,7 +31,6 @@ export default function Testimonials() {
             const container = scrollContainerRef.current;
 
             if (container) {
-                // Check if the container is scrolled to the leftmost or rightmost edge
                 setShowLeftButton(container.scrollLeft > 0);
                 setShowRightButton(container.scrollLeft < container.scrollWidth - container.clientWidth);
             }
@@ -40,7 +38,6 @@ export default function Testimonials() {
 
         const container = scrollContainerRef.current;
         if (container) {
-            // Initial check for the left and right button visibility
             setShowLeftButton(container.scrollLeft > 0);
             setShowRightButton(container.scrollLeft < container.scrollWidth - container.clientWidth);
 
@@ -49,7 +46,6 @@ export default function Testimonials() {
         }
 
         return () => {
-            // Remove scroll event listener on component unmount
             const container = scrollContainerRef.current;
             if (container) {
                 container.removeEventListener('scroll', handleScroll);
@@ -58,7 +54,10 @@ export default function Testimonials() {
     }, []);
 
     return (
-        <div className='w-full px-2 my-4'>
+        <div className='w-full px-2 my-8' id='testimonials-section'>
+            <div className='flex justify-center w-full'>
+                <h2 className='py-10 text-2xl text-white'>What Our Clients Say ?</h2>
+            </div>
             <div className='relative w-full'>
                 <div className='flex w-full gap-4 overflow-x-auto scrollbar-hide' ref={scrollContainerRef}>
                     {

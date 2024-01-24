@@ -5,7 +5,7 @@ import Testimonials from './components/Testimonials/Testimonials';
 import BookNow from './components/BookingForm/BookNow';
 function App() {
   return (
-    <div className='  bg-[#295a5e] '>
+    <div className='bg-[#295a5e] pb-8'>
       <Navbar />
       <HeroSection />
       <Testimonials />
