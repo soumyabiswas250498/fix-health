@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
 export default function Navbar() {
     const [section, setSection] = useState('');
+    const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
         if (section) {
@@ -9,18 +12,29 @@ export default function Navbar() {
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
-
         }
     }, [section])
 
     return (
-        <div className='flex items-center justify-between w-full px-2 bg-[#092635] text-yellow-50'>
-            <img src="/assets/img/logo.svg" alt="logo" className='h-12 py-1' />
-            <div className='flex items-center w-auto gap-3'>
-                <p className='px-4 py-2 rounded-md cursor-pointer bg-[#1B4242]  hover:bg-[#5C8374]' onClick={() => setSection('hero-section')}>Home</p>
-                <p className='px-4 py-2 rounded-md cursor-pointer bg-[#1B4242]  hover:bg-[#5C8374]' onClick={() => setSection('testimonials-section')}>Testimonials</p>
-                <p className='px-4 py-2 rounded-md cursor-pointer bg-[#1B4242]  hover:bg-[#5C8374]' onClick={() => setSection('book-section')}>Book Now</p>
+        <div className='pb-16'>
+            <div className='fixed flex items-center justify-between w-full px-2 backdrop-blur-md bg-[#092635a6] text-yellow-50 z-30'>
+                <img src="/assets/img/logo.svg" alt="logo" className='h-12 py-1' />
+                <div className='items-center hidden w-auto gap-3 md:flex'>
+                    <p className='px-4 py-2 rounded-md cursor-pointer bg-[#1B4242]  hover:bg-[#5C8374]' onClick={() => setSection('hero-section')}>Home</p>
+                    <p className='px-4 py-2 rounded-md cursor-pointer bg-[#1B4242]  hover:bg-[#5C8374]' onClick={() => setSection('testimonials-section')}>Testimonials</p>
+                    <p className='px-4 py-2 rounded-md cursor-pointer bg-[#1B4242]  hover:bg-[#5C8374]' onClick={() => setSection('book-section')}>Book Now</p>
+                </div>
+                <div className='pr-3 md:hidden'>
+                    {showMenu ? <RxCross2 onClick={() => setShowMenu(false)} /> : <GiHamburgerMenu onClick={() => setShowMenu(true)} />}
+                </div>
+                {showMenu && <div className='absolute flex flex-col justify-center items-center gap-2 top-[48px] h-[30vh] w-[98vw] backdrop-blur-md bg-[#3b8d8d52] border border-blue-400'>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#1b4242c5]' onClick={() => { setSection('hero-section'); setShowMenu(false) }}>Home</p>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#1b4242c5]' onClick={() => { setSection('testimonials-section'); setShowMenu(false) }}>Testimonials</p>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#1b4242c5]' onClick={() => { setSection('book-section'); setShowMenu(false) }}>Book Now</p>
+
+                </div>}
             </div>
+
         </div>
     )
 }
