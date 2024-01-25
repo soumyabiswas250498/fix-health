@@ -7,6 +7,7 @@ import { useFormik } from 'formik';
 import { formSchema } from '../../Validation/FormSchema';
 import useCityDoctor from '../../Hooks/useCityDoctor';
 import useGetReq from '../../Hooks/useGetReq';
+import useGetUrlParams from '../../Hooks/useGetUrlParams';
 
 
 interface Iprops {
@@ -18,15 +19,22 @@ export default function Form(props: Iprops) {
     const { setShowForm, setSubmit } = props;
     const [cities, setCities] = useState([{ label: '', value: '' }])
     const [doctors, setDoctors] = useState([{ label: '', value: '' }])
+    const [urlCity, setUrlCity] = useState('')
     const [showExperince, setShowExperience] = useState(false);
     const { data, loading } = useGetReq('https://my-json-server.typicode.com/soumyabiswas250498/json-db/cityData');
     const { makeCityArr, makeDoctorArr } = useCityDoctor()
+    const getCity = useGetUrlParams();
+
 
     useEffect(() => {
         if (data) {
+            setUrlCity(getCity('city', data) || '')
+
             setCities([{ label: '', value: '' }, ...makeCityArr(data)]);
         }
     }, [data])
+
+
 
 
     const initialValues = {
@@ -65,8 +73,14 @@ export default function Form(props: Iprops) {
         if (values.city && data) {
             setDoctors([{ label: '', value: '' }, ...makeDoctorArr(data, values.city)])
         }
-
     }, [values.city, data])
+
+    useEffect(() => {
+        if (urlCity) {
+            setFieldValue('city', urlCity)
+
+        }
+    }, [urlCity])
 
     if (loading) {
         return (
