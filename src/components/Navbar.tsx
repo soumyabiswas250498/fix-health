@@ -28,9 +28,9 @@ export default function Navbar() {
                     {showMenu ? <RxCross2 onClick={() => setShowMenu(false)} /> : <GiHamburgerMenu onClick={() => setShowMenu(true)} />}
                 </div>
                 {showMenu && <div className='absolute flex flex-col justify-center items-center gap-2 top-[48px] h-[30vh] w-[98vw] backdrop-blur-2xl bg-[#3b8d8d75] '>
-                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838c5]' onClick={() => { setSection('hero-section'); setShowMenu(false) }}>Home</p>
-                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838c5]' onClick={() => { setSection('testimonials-section'); setShowMenu(false) }}>Testimonials</p>
-                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838c5]' onClick={() => { setSection('book-section'); setShowMenu(false) }}>Book Now</p>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838f5]' onClick={() => { setSection('hero-section'); setShowMenu(false) }}>Home</p>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838e8]' onClick={() => { setSection('testimonials-section'); setShowMenu(false) }}>Testimonials</p>
+                    <p className='px-4 w-32 flex justify-center items-center py-2 rounded-md cursor-pointer bg-[#103838ec]' onClick={() => { setSection('book-section'); setShowMenu(false) }}>Book Now</p>
 
                 </div>}
             </div>
