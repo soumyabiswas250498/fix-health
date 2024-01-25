@@ -1,0 +1,18 @@
+{
+  "Mumbai": ["Amit Patel", "Priya Shah", "Raj Kumar", "Sneha Desai"],
+  "Delhi": ["Vikram Singh", "Neha Gupta", "Ankit Sharma", "Pooja Verma"],
+  "Bangalore": ["Arjun Reddy", "Shreya Rao", "Kiran Kumar", "Divya Menon"],
+  "Chennai": [
+    "Ravi Choudhary",
+    "Sonia Nair",
+    "Prakash Iyer",
+    "Nandini Krishnan"
+  ],
+  "Hyderabad": [
+    "Rajesh Reddy",
+    "Swathi Rao",
+    "Vinay Kumar",
+    "Ananya Choudhary"
+  ],
+  "Kolkata": ["Suman Das", "Mita Banerjee", "Rahul Ghosh", "Anjali Mukherjee"]
+}
